@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 800px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: white;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 16px;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+
+        .contact-links a:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .intro-text {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .skill-group {
+            margin-bottom: 20px;
+        }
+
+        .skill-name {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .skill-bar {
+            background: #e0e0e0;
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.3s;
+        }
+
+        .experience-item {
+            margin-bottom: 25px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #667eea;
+        }
+
+        .experience-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .experience-subtitle {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .experience-desc {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .project {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        .project-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .project-desc {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #f9f9f9;
+            color: #999;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .header {
+                padding: 40px 20px;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .section-title {
+                font-size: 20px;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="avatar">👨‍💻</div>
+            <h1>你的名字</h1>
+            <p>全栈开发工程师 | 技术爱好者</p>
+            <div class="contact-links">
+                <a href="mailto:your.email@example.com">📧 邮箱</a>
+                <a href="https://github.com/witim-git" target="_blank">🐙 GitHub</a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank">💼 LinkedIn</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- 个人简介 -->
+            <section class="section">
+                <h2 class="section-title">关于我</h2>
+                <p class="intro-text">
+                    欢迎来到我的个人主页！我是一名充满热情的全栈开发工程师，拥有多年的软件开发经验。
+                    我热衷于学习新技术，参与开源项目，并通过代码解决实际问题。
+                </p>
+            </section>
+
+            <!-- 技能 -->
+            <section class="section">
+                <h2 class="section-title">技能</h2>
+                <div class="skill-group">
+                    <div class="skill-name">Web 前端开发</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-name">后端开发</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 80%"></div>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-name">数据库设计</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 75%"></div>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-name">DevOps & 云平台</div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" style="width: 70%"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 工作经验 -->
+            <section class="section">
+                <h2 class="section-title">工作经验</h2>
+                <div class="experience-item">
+                    <div class="experience-title">Senior Developer</div>
+                    <div class="experience-subtitle">科技公司 | 2022 - 至今</div>
+                    <div class="experience-desc">
+                        负责核心产品的开发和维护，带领团队实现高性能系统架构，提升系统效率 30%。
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-title">Full Stack Developer</div>
+                    <div class="experience-subtitle">互联网公司 | 2020 - 2022</div>
+                    <div class="experience-desc">
+                        开发和维护多个 Web 应用程序，参与产品从0到1的搭建过程。
+                    </div>
+                </div>
+            </section>
+
+            <!-- 项目经验 -->
+            <section class="section">
+                <h2 class="section-title">代表作品</h2>
+                <div class="project">
+                    <div class="project-title">🚀 项目名称 1</div>
+                    <div class="project-desc">
+                        项目描述：这是一个基于 React + Node.js 的全栈项目，实现了 XXX 功能。
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-title">📱 项目名称 2</div>
+                    <div class="project-desc">
+                        项目描述：这是一个移动应用项目，使用 React Native 开发，具有 XXX 特点。
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-title">🎯 开源项目</div>
+                    <div class="project-desc">
+                        参与贡献的开源项目，累计获得 100+ Star。
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 个人主页 | 由 HTML + CSS 构建</p>
+        </div>
+    </div>
+</body>
+</html>
