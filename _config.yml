@@ -7,7 +7,7 @@ url: https://witim-git.github.io
 baseurl: ""
 
 # 主题配置
-theme: jekyll-theme-minimal
+# theme: jekyll-theme-minimal (Disabled to use custom HTML/CSS)
 
 # 社交媒体链接
 github_username: witim-git

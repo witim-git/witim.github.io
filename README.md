@@ -1,48 +1,46 @@
-# 个人主页 - witim.github.io
+# Witim.github.io - Geek Style Portfolio
 
-这是我的个人GitHub Pages主页，展示个人信息、技能、项目和工作经验。
+> A minimalist, dark-themed, terminal-style personal website.
 
-## 📋 主页内容
+## 🖥️ Overview | 简介
 
-- **个人简介** - 关于我和职业背景
-- **技能展示** - 技术栈和技能等级
-- **工作经验** - 职业发展历程
-- **代表作品** - 项目和开源贡献
+这是一个极客风格（Geek Style）的个人主页，采用深色模式（Dark Mode）、模拟终端界面、Glitch 故障风特效以及打字机动画。
+项目基于原生 HTML/CSS/JS 构建，无繁重框架依赖，轻量且高效。
 
-## 🚀 快速开始
+## ✨ Features | 特性
 
-1. 访问主页：https://witim-git.github.io
-2. 查看 `index.html` 了解页面结构
-3. 根据需要自定义内容
+- **Terminal Aesthetic**: 模拟终端窗口的头部设计。
+- **Glitch Effect**: 纯 CSS 实现的文字故障特效。
+- **Typing Animation**: JavaScript 实现的打字机输入效果。
+- **Dark Mode**: 沉浸式深色背景，配合霓虹绿/赛博朋克粉点缀。
+- **Responsive**: 响应式设计，完美适配移动端与桌面端。
 
-## 📝 自定义指南
+## 📂 Structure | 目录结构
 
-### 修改个人信息
-编辑 `index.html` 中的以下部分：
-- 头像和名字（第95行）
-- 职位/简介（第96行）
-- 联系方式链接（第97-99行）
+```bash
+.
+├── index.html      # 页面主体结构
+├── style.css       # 核心样式 (Terminal theme, Animations)
+├── script.js       # 交互脚本 (Typing effect)
+├── _config.yml     # Jekyll 配置 (禁用默认主题)
+└── README.md       # 说明文档
+```
 
-### 修改技能
-在 `index.html` 的技能部分修改：
-- 技能名称和进度条宽度
+## 🛠️ Customization | 自定义指南
 
-### 更新项目
-在项目经验部分添加或修改项目信息
+### 1. 修改个人信息
+- **名字**: 编辑 `index.html` 中的 `<h1 class="glitch" data-text="Witim">Witim</h1>`。
+- **打字机文字**: 编辑 `script.js` 中的 `const text = "..."` 变量。
+- **关于/项目**: 直接修改 `index.html` 中的 `<section>` 内容。
 
-## 🛠️ 技术栈
+### 2. 调整样式
+- **配色**: 在 `style.css` 的 `:root` 变量中修改 `--bg-color`, `--accent` 等颜色。
+- **字体**: 默认使用 Google Fonts (Fira Code & Inter)，可在 `index.html` `<head>` 中更换。
 
-- HTML5
-- CSS3（Flexbox & Grid）
-- 响应式设计
-- Jekyll + GitHub Pages
+## 🚀 Deployment | 部署
 
-## 📧 联系方式
-
-- 邮箱：your.email@example.com
-- GitHub：https://github.com/witim-git
-- LinkedIn：https://linkedin.com/in/yourprofile
+本项目直接托管于 GitHub Pages。
+修改代码并 Push 到仓库后，GitHub 会自动更新页面。
 
 ---
-
-**最后更新于：2026年1月**
+*© 2024 Witim. Built with <3/&gt;*
